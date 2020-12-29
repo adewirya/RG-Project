@@ -17,7 +17,7 @@ class CreateMember3Table extends Migration
             $table->id();
             $table->string('mem3');
             $table->string('mem3Stat');
-            $table->email('mem3E');
+            $table->string('mem3E');
             $table->string('mem3ID');
             $table->integer('mem3Number');
             $table->string('mem3GIT');

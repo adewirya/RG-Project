@@ -17,7 +17,7 @@ class CreateMember1Table extends Migration
             $table->id();
             $table->string('mem1');
             $table->string('mem1Stat');
-            $table->email('mem1E');
+            $table->string('mem1E');
             $table->string('mem1ID');
             $table->integer('mem1Number');
             $table->string('mem1GIT');

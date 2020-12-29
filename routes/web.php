@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LeaderController@index')->name('index');
+Route::get('/createLeader', 'LeaderController@create')->name('leader.create');
+Route::post('/storeLeader', 'LeaderController@store')->name('leader.store');
+
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
