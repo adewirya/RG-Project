@@ -19,7 +19,7 @@ class CreateLeadersTable extends Migration
             $table->string('leadStat');
             $table->string('leadE');
             $table->string('leadID');
-            $table->integer('leadNumber');
+            $table->string('leadNumber');
             $table->string('leadGit');
             $table->date('leadDOB');
             $table->string('leadBirth');

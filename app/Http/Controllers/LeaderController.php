@@ -27,7 +27,7 @@ class LeaderController extends Controller
             'leadStat' => 'required|max:255',
             'leadE' => 'required|max:255',
             'leadID'=> 'required|max:255',
-            'leadNumber' => 'required',
+            'leadNumber' => 'required|max:13',
             'leadGIT' => 'required|max:255',
             'leadDOB' => 'required',
             'leadBirth' => 'required|max:255'

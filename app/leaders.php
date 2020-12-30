@@ -10,4 +10,8 @@ class leaders extends Model
     [
         'leadN', 'leadStat', 'leadE', 'leadID', 'leadNumber', 'leadGit', 'leadDOB', 'leadBirth'
     ];
+    public function member()
+    {
+        return $this->belongsTo('App\member1');
+    }
 }

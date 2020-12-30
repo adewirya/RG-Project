@@ -19,7 +19,7 @@ class CreateMember2Table extends Migration
             $table->string('mem2Stat');
             $table->string('mem2E');
             $table->string('mem2ID');
-            $table->integer('mem2Number');
+            $table->string('mem2Number');
             $table->string('mem2GIT');
             $table->date('mem2DOB');
             $table->string('mem2Birth');
