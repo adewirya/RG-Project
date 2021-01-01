@@ -17,7 +17,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'groupName', 'password', 'groupStat',
-        'leadN', 'leadE', 'leadID', 'leadNumber', 'leadGit', 'leadDOB', 'leadBirth'
+        'leadN', 'leadE', 'leadNumber', 'leadID', 'leadGit', 'leadBirth', 'leadDOB'
     ];
 
     /**

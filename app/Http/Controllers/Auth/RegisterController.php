@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'leadN' => ['required', 'string', 'max:255'],
             'leadE' => ['required', 'string','email', 'max:255', 'unique:users'],
             'leadID' => ['required', 'string', 'max:255'],
-            'leadNumber' => ['required', 'numeric', 'min:12', 'max:15'],
+            'leadNumber' => ['required', 'numeric'],
             'leadGIT' => ['required', 'string', 'max:255'],
             'leadDOB' => ['required', 'date'],
             'leadBirth' => ['required', 'string', 'max:255']
@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'leadE' => $data['leadE'],
             'leadID' => $data['leadID'],
             'leadNumber' => $data['leadNumber'],
-            'leadGIT' => $data['leadGIT'],
+            'leadGit' => $data['leadGit'],
             'leadDOB' => $data['leadDOB'],
             'leadBirth' => $data['leadBirth']
         ]);
