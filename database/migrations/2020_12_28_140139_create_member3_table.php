@@ -16,7 +16,6 @@ class CreateMember3Table extends Migration
         Schema::create('member3', function (Blueprint $table) {
             $table->id();
             $table->string('mem3');
-            $table->string('mem3Stat');
             $table->string('mem3E');
             $table->string('mem3ID');
             $table->string('mem3Number');

@@ -16,7 +16,6 @@ class CreateMember2Table extends Migration
         Schema::create('member2', function (Blueprint $table) {
             $table->id();
             $table->string('mem2');
-            $table->string('mem2Stat');
             $table->string('mem2E');
             $table->string('mem2ID');
             $table->string('mem2Number');

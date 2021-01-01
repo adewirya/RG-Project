@@ -26,7 +26,6 @@ class mem1Controller extends Controller
         $request->validate
         ([
             'mem1' => 'required|max:255',
-            'mem1Stat' => 'required|max:255',
             'mem1E' => 'required|max:255',
             'mem1ID'=> 'required|max:255',
             'mem1Number' => 'required|max:13',
@@ -34,7 +33,6 @@ class mem1Controller extends Controller
             'mem1DOB' => 'required',
             'mem1Birth' => 'required|max:255',
             'mem2' => 'required|max:255',
-            'mem2Stat' => 'required|max:255',
             'mem2E' => 'required|max:255',
             'mem2ID'=> 'required|max:255',
             'mem2Number' => 'required|max:13',
@@ -42,7 +40,6 @@ class mem1Controller extends Controller
             'mem2DOB' => 'required',
             'mem2Birth' => 'required|max:255',
             'mem3' => 'required|max:255',
-            'mem3Stat' => 'required|max:255',
             'mem3E' => 'required|max:255',
             'mem3ID'=> 'required|max:255',
             'mem3Number' => 'required|max:13',
@@ -53,7 +50,6 @@ class mem1Controller extends Controller
 
         member1::create([
             'mem1' => $request->mem1,
-            'mem1Stat' => $request->mem1Stat,
             'mem1E' => $request->mem1E,
             'mem1ID'=> $request->mem1ID,
             'mem1Number' => $request->mem1Number,
@@ -61,7 +57,6 @@ class mem1Controller extends Controller
             'mem1DOB' => $request->mem1DOB,
             'mem1Birth' => $request->mem1Birth,
             'mem2' => $request->mem2,
-            'mem2Stat' => $request->mem2Stat,
             'mem2E' => $request->mem2E,
             'mem2ID'=> $request->mem2ID,
             'mem2Number' => $request->mem2Number,
@@ -69,7 +64,6 @@ class mem1Controller extends Controller
             'mem2DOB' => $request->mem2DOB,
             'mem2Birth' => $request->mem2Birth,
             'mem3' => $request->mem3,
-            'mem3Stat' => $request->mem3Stat,
             'mem3E' => $request->mem3E,
             'mem3ID'=> $request->mem3ID,
             'mem3Number' => $request->mem3Number,

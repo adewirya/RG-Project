@@ -50,9 +50,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'groupName' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'groupStat' => ['required', 'string', 'max:255'], 
+            'leadN' => ['required', 'string', 'max:255'],
+            'leadE' => ['required', 'string','email', 'max:255', 'unique:users'],
+            'leadID' => ['required', 'string', 'max:255'],
+            'leadNumber' => ['required', 'numeric', 'min:12', 'max:15'],
+            'leadGIT' => ['required', 'string', 'max:255'],
+            'leadDOB' => ['required', 'date'],
+            'leadBirth' => ['required', 'string', 'max:255']
         ]);
     }
 
@@ -65,9 +72,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            'groupName' => $data['groupName'],
             'password' => Hash::make($data['password']),
+            'groupStat' => $data['groupStat'],
+
+            'leadN' => $data['leadN'],
+            'leadE' => $data['leadE'],
+            'leadID' => $data['leadID'],
+            'leadNumber' => $data['leadNumber'],
+            'leadGIT' => $data['leadGIT'],
+            'leadDOB' => $data['leadDOB'],
+            'leadBirth' => $data['leadBirth']
         ]);
     }
 }
