@@ -40,6 +40,6 @@ class User extends Authenticatable
     
     public function member()
     {
-        return $this->belongsTo('App\member1');
+        return $this->hasMany('App\member1');
     }
 }

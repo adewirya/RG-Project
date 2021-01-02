@@ -9,12 +9,12 @@ class UserController extends Controller
 {
     public function index(){
         $user = User::all();
-        return view('welcome', compact('user'));
+        return view('welcome', compact('User'));
     }
 
     public function show($id){
         $user = User::findOrFail($id);
-        return view('show', compact('user'));
+        return view('show', compact('User'));
     }
 
     public function create(){
@@ -32,9 +32,9 @@ class UserController extends Controller
             'leadID'=> 'required|max:255',
             'leadNumber' => 'required|digits:10',
             'leadGIT' => 'required|max:255',
-            'leadDOB' => 'required',
-            'leadBirth' => 'required|max:255'
-        ]);
+            'leadBirth' => 'required|max:255',
+            'leadDOB' => 'required'
+            ]);
 
         User::create([
             'groupName' => $request->groupName,
