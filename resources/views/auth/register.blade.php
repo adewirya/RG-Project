@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('REGISTER') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -51,8 +51,14 @@
                             <label for="groupStat" class="col-md-4 col-form-label text-md-right">{{ __('Binusian/Not') }}</label>
 
                             <div class="col-md-6">
-                                <input id="groupStat" type="text" placeholder="Binusian/Not" class="form-control @error('groupStat') is-invalid @enderror" name="groupStat" value="{{ old('groupStat') }}" required autocomplete="groupStat">
-
+                                <label for="groupStat">
+                                    <input id="groupStat" type="radio" class="form-control" name="groupStat" value="Binusian" required>
+                                    Binusian
+                                </label>
+                                <label for="groupStat">
+                                    <input id="groupStat" type="radio" class="form-control" name="groupStat" value="Non-Binusian" required>
+                                    Non-Binusian
+                                </label>
                                 @error('groupStat')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -158,6 +164,13 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <!-- <div class="form-group row">
+                            <div>
+                                {{ Form::radio('Binusian', '1') }} Non-Binusian
+                                {{ Form::radio('Binusian', '0') }} Binusian
+                            </div>
+                        </div> -->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

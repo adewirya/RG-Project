@@ -58,9 +58,26 @@ class RegisterController extends Controller
             'leadE' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'leadNumber' => ['required', 'numeric', 'digits_between:8,15', 'unique:users'],
             'leadID' => ['required', 'string', 'unique:users'],
-            'leadGit' => ['required', 'string'],
+            'leadGit' => ['required', 'string', 'unique:users'],
             'leadBirth' => ['required', 'string'],
             'leadDOB' => ['required']
+        ],
+        [
+            'groupName.max' => 'The group name must not contain more than 255 characters.',
+            'groupName.unique' => 'That group name has already been taken.',
+
+            'password.regex' => 'The password must contain an uppercase letter, a lowercase letter, a number, and a special character.',
+            
+            'leadE.max' => 'The email must not contain more than 255 characters.',
+            'leadE.unique' => 'That email has already been used.',
+
+            'leadNumber.numeric' => 'The WhatsApp number must be numeric.',
+            'leadNumber.digits_between' => 'The WhatsApp number must be between 8 and 15 digits.',
+            'leadNumber.unique' => 'That WhatsApp number has already been used.',
+
+            'leadID.email' => 'That LINE ID has already been used.',
+
+            'leadGit' => 'That GitHub/GitLab ID has already been used.'
         ]);
     }
 

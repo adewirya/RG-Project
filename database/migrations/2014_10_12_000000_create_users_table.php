@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('leadE')->unique();
             $table->string('leadNumber')->unique();
             $table->string('leadID')->unique();
-            $table->string('leadGit');
+            $table->string('leadGit')->unique();
             $table->string('leadBirth');
             $table->date('leadDOB');
             $table->rememberToken();
