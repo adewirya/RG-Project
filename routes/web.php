@@ -16,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', 'LeaderController@index')->name('index');
 // Route::get('/createLeader', 'LeaderController@create')->name('leader.create');
 // Route::post('/storeLeader', 'LeaderController@store')->name('leader.store');
-Route::get('/', 'HomeController@index')->name('homepage');
-Route::get('/register', 'HomeController@register')->name('leader.register');
-Route::post('/store', 'UserController@store')->name('leader.store');
+// Route::get('/', 'HomeController@index')->name('homepage');
+// Route::get('/register', 'HomeController@register')->name('leader.register');
+// Route::post('/store', 'UserController@store')->name('leader.store');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/home', 'HomeController@index')->name('index');
 
 Auth::routes();

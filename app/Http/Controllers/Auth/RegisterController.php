@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -49,18 +49,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, 
-        [
-            'groupName' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'groupStat' => ['required', 'string', 'max:255'], 
-            'leadN' => ['required', 'string', 'max:255'],
-            'leadE' => ['required', 'string','email', 'max:255', 'unique:users'],
-            'leadID' => ['required', 'string', 'max:255'],
-            'leadNumber' => ['required'],
-            'leadGIT' => ['required', 'string', 'max:255'],
-            'leadDOB' => ['required', 'date'],
-            'leadBirth' => ['required', 'string', 'max:255']
+        return Validator::make($data, [
+            'groupName' => ['required', 'string', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed',
+                            'regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/', 'regex:/[!@#$%&*?]/'],
+            'groupStat' => ['required', 'string'],
+            'leadN' => ['required', 'string'],
+            'leadE' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'leadNumber' => ['required', 'numeric', 'digits_between:8,15', 'unique:users'],
+            'leadID' => ['required', 'string', 'unique:users'],
+            'leadGit' => ['required', 'string'],
+            'leadBirth' => ['required', 'string'],
+            'leadDOB' => ['required']
         ]);
     }
 
@@ -72,18 +72,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return users::create([
+        return User::create([
             'groupName' => $data['groupName'],
             'password' => Hash::make($data['password']),
             'groupStat' => $data['groupStat'],
-
             'leadN' => $data['leadN'],
             'leadE' => $data['leadE'],
-            'leadID' => $data['leadID'],
             'leadNumber' => $data['leadNumber'],
+            'leadID' => $data['leadID'],
             'leadGit' => $data['leadGit'],
-            'leadDOB' => $data['leadDOB'],
-            'leadBirth' => $data['leadBirth']
+            'leadBirth' => $data['leadBirth'],
+            'leadDOB' => $data['leadDOB']
         ]);
     }
 }

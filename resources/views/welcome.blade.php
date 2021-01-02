@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
     <h1>HOMEPAGE DI SINI NTAR</h1>
@@ -18,7 +19,7 @@
             @endif
         @endauth
     </div>
-    <a href="{{route('leader.create')}}" class="btn btn-primary mt-5"
+    <a href="{{route('register')}}" class="btn btn-primary mt-5"
             style="display: block; margin:auto; width:50%">
         Insert New Leader
     </a>
