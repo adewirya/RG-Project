@@ -164,14 +164,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <!-- <div class="form-group row">
-                            <div>
-                                {{ Form::radio('Binusian', '1') }} Non-Binusian
-                                {{ Form::radio('Binusian', '0') }} Binusian
-                            </div>
-                        </div> -->
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

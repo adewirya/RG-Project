@@ -19,6 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('groupStat');
             
+            $table->string('usertype')->nullable(); 
+            $table->string('paymentStatus')->nullable();
+
             $table->string('leadN');
             $table->string('leadE')->unique();
             $table->string('leadNumber')->unique();

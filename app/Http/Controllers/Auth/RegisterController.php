@@ -73,7 +73,7 @@ class RegisterController extends Controller
 
             'leadNumber.numeric' => 'The WhatsApp number must be numeric.',
             'leadNumber.digits_between' => 'The WhatsApp number must be between 8 and 15 digits.',
-            'leadNumber.unique' => 'That WhatsApp number has already been used.',
+            'leadNumber.unique' => 'The WhatsApp number has already been used.',
 
             'leadID.email' => 'That LINE ID has already been used.',
 
