@@ -116,7 +116,7 @@
                     <span class="polos-m jarak">to Hackathon 4.0 here!</span>
                 </div>
                 <div class="download">
-                    <span class="download-text">DOWNLOAD</span>
+                    <a href="/download" class="download-text">DOWNLOAD</a>
                 </div>
             </div>
             <!-- <span class="backtext">1</span> -->

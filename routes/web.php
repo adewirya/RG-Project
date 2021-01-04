@@ -13,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', 'LeaderController@index')->name('index');
-// Route::get('/createLeader', 'LeaderController@create')->name('leader.create');
-// Route::post('/storeLeader', 'LeaderController@store')->name('leader.store');
-// Route::get('/', 'HomeController@index')->name('homepage');
-// Route::get('/register', 'HomeController@register')->name('leader.register');
-// Route::post('/store', 'UserController@store')->name('leader.store');
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -40,5 +33,12 @@ Route::group(['middleware'  => ['auth','admin']], function() {
 	Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
 });
+
+Route::get('/download', function (){
+	$file = public_path(). "/Hackathon4.0GuideBook.pdf";
+	$headers = [ 'Content-Type' => 'application/pdf', ];
+	return response()->download($file, 'Hackthon 4.0 Guide Book.pdf', $headers);}
+);
+
 
 Auth::routes();

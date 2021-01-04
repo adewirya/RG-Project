@@ -1,180 +1,143 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="{{asset('css/register.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html"><img class="gambar" src="/logo.png" alt="logo"></a>
+    </div>
+    <div class="formnya">
+        <form action="" class="inside">
+            <div class="heading">
+                Let's Start Your Adventure!
+            </div>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('REGISTER') }}</div>
+            <div class="group-info">
+                <div class="head">
+                    <img class="gambarnya-group" src="/icon/group.png" alt="group-icon">
+                    <span class="head-title">
+                        Group Information
+                    </span>
+                </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="groupName" class="col-md-4 col-form-label text-md-right">{{ __('Group Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="groupName" type="text" placeholder="Group Name" class="form-control @error('groupName') is-invalid @enderror" name="groupName" value="{{ old('groupName') }}" required autocomplete="groupName" autofocus>
-
-                                @error('groupName')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="groupStat" class="col-md-4 col-form-label text-md-right">{{ __('Binusian/Not') }}</label>
-
-                            <div class="col-md-6">
-                                <label for="groupStat">
-                                    <input id="groupStat" type="radio" class="form-control" name="groupStat" value="Binusian" required>
-                                    Binusian
-                                </label>
-                                <label for="groupStat">
-                                    <input id="groupStat" type="radio" class="form-control" name="groupStat" value="Non-Binusian" required>
-                                    Non-Binusian
-                                </label>
-                                @error('groupStat')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadN" class="col-md-4 col-form-label text-md-right">{{ __('Full Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadN" type="text" placeholder="Full Name" class="form-control @error('leadN') is-invalid @enderror" name="leadN" value="{{ old('leadN') }}" required autocomplete="leadN">
-
-                                @error('leadN')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadE" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadE" type="email" placeholder="Email" class="form-control @error('leadE') is-invalid @enderror" name="leadE" value="{{ old('leadE') }}" required autocomplete="leadE">
-
-                                @error('leadE')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadNumber" class="col-md-4 col-form-label text-md-right">{{ __('WhatsApp Number') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadNumber" type="text" placeholder="WhatsApp Number" class="form-control @error('leadNumber') is-invalid @enderror" name="leadNumber" value="{{ old('leadNumber') }}" required autocomplete="leadNumber">
-
-                                @error('leadNumber')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadID" class="col-md-4 col-form-label text-md-right">{{ __('LINE ID') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadID" type="text" placeholder="LINE ID" class="form-control @error('leadID') is-invalid @enderror" name="leadID" value="{{ old('leadID') }}" required autocomplete="leadID">
-
-                                @error('leadID')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadGit" class="col-md-4 col-form-label text-md-right">{{ __('GitHub/GitLab ID') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadGit" type="text" placeholder="GitHub/GitLab ID" class="form-control @error('leadGit') is-invalid @enderror" name="leadGit" value="{{ old('leadGit') }}" required autocomplete="leadGit">
-
-                                @error('leadGit')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadBirth" class="col-md-4 col-form-label text-md-right">{{ __('Birth Place') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadBirth" type="text" placeholder="Birth Place" class="form-control @error('leadBirth') is-invalid @enderror" name="leadBirth" value="{{ old('leadBirth') }}" required autocomplete="leadBirth">
-
-                                @error('leadBirth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="leadDOB" class="col-md-4 col-form-label text-md-right">{{ __('Birth Date') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="leadDOB" type="date" class="form-control @error('leadDOB') is-invalid @enderror" name="leadDOB" value="{{ old('leadDOB') }}" required autocomplete="leadDOB">
-
-                                @error('leadDOB')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Group Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="password" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Password</label>
+                </div>
+                <div class="info">
+                    Min. 8 digits with uppercase, lowercase, number, and symbols (e.g. Angela_3)
+                </div>
+                <div class="input-data">
+                    <input type="password" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Confirm Password</label>
+                </div>
+                <div class="container">
+                    <label class="switch">
+                        <input type="checkbox" id="myCheck" onclick="myFunction()">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="what-is binusian">BINUSIAN</span>
                 </div>
             </div>
-        </div>
+
+            <div class="leader-info">
+                <div class="head">
+                    <img class="gambarnya-solo" src="/icon/leader.png" alt="leader-icon">
+                    <span class="head-title">
+                        Leader Information
+                    </span>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Leader Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="email" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Email</label>
+                </div>
+                <div class="input-data">
+                    <input type="phone" required>
+                    <div class="underline"></div>
+                    <label class="what-is">WA Number</label>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">LINE ID</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Github ID</label>
+                </div>
+                <div class="birth">
+                    <div class="input-data pob">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Birthplace</label>
+                    </div>
+                    <span class="seperate"></span>
+                    <div class="input-data dob">
+                        <input type="date" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Birthday</label>
+                    </div>
+                </div>
+                <div id="cv">
+                    <div class="input-data">
+                        <input type="file" id="file" onchange="return ValidasiCV()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload CV</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>
+                </div>
+                <div id="text">
+                    <div class="input-data">
+                        <input type="file" id="fc" onchange="return ValidasiFC()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload Flazzcard</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>                 
+                </div>
+                <div id="data">
+                    <div class="input-data">
+                        <input type="file" id="idc" onchange="return ValidasiIDC()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload ID Card</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button type="submit" class="btn">SUBMIT</button>
+            </div>
+        </form>
+        <script src="../js/ifbinus.js"></script>
+        <script src="../js/filetype.js"></script>
     </div>
-</div>
-@endsection
+</body>
+</html>
