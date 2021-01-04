@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- link css -->
+<link rel="stylesheet" href="../style/admin.viewparticipants.css">
+<body>
+    
+<!-- link font google  -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+<!-- link font awesome -->
+<script src="https://kit.fontawesome.com/6f80ee10bd.js" crossorigin="anonymous"></script>
+
+
+    <div class="wrapper">
+        <section class="sidebar">
+         
+            <img src="../assets/logo.png" alt="">
+            <h4>ADMIN</h4>
+           
+            <ul>
+               <li><a href="admin.html"><i class="fas fa-chart-line"></i>DASHBOARD</a></li>
+               <li><a href="admin.participants.html"><i class="fas fa-users"></i>PARTICIPANTS</a></li>
+               <li><a href="admin.logout.html"><i class="fas fa-sign-out-alt"></i>LOG OUT</a></li>
+            </ul>
+        </section>
+
+
+
+                <section class="main-content">
+                    <div class="header"><h3>PARTICIPANTS</h3></div>
+   
+                    <div class="view-data-participants">
+                        <div class="title-box title-box2">
+                        <p>Leader Information</p>
+                        </div>
+                                <div class="user-data">
+                                    <label for=""> Leader Name</label>
+                                    <input type="text">
+                                </div>
+                
+                                <div class="user-data">
+                                    <label for="">Email</label>
+                                    <input type="text">
+                                </div>
+                
+                                <div class="user-data">
+                                    <label for="">LINE ID</label>
+                                    <input type="text">
+                
+                                </div>
+                
+                                <div class="user-data">
+                                    <label for="">Github ID</label>
+                                    <input type="text">
+                
+                                </div>
+
+                                <!-- BIRTH  -->
+                                <div class="birth">
+                                    <div class="user-data-birth">
+                                        <label for="">Birthplace</label>
+                                        <input class="place" type="text">
+                                    </div>
+                                    <span class="space"></span>
+                                    <div class="user-data-birth">
+                                        <label for="">Birthdate</label>
+                                        <input  type="date">
+                                    </div>
+                                </div>
+
+
+
+                                <!-- CV  -->
+                                <div class="photo-btn">
+                                    <div class="user-data-cv">
+                                        <label for="">Uploaded CV</label>
+                                        <button class="cv-btn" onclick="togglepopupx()">CV</button>
+                                    </div>
+
+                                      <!-- pop-up-box-CV -->
+                                      <div class="popupx"  id="popup-1x">
+                                        <div class="overlayx"></div>
+                                            <div class="contentx">
+                                                <div class="popup-headerx">
+                                                    <div class="popup-titlex"> CV</div>
+                                                    <div class="close-btnx" onclick="togglepopupx()">&times;</div>
+                                                </div>
+                                                <img src="" alt="">
+                                            </div>
+                                    </div>
+
+
+                                <!-- Flazz -->
+                                    <div class="user-data-flazz">
+                                        <label for="">Flazzcard</label>
+                                        <button class="flazz-btn" onclick="togglepopupy()">Flazz</button>
+                                    </div>
+                                </div>
+
+                                        <!-- pop-up-box-FLAZZCARD -->
+                                        <div class="popupy"  id="popup-1y">
+                                            <div class="overlayy"></div>
+                                                <div class="contenty">
+                                                    <div class="popup-headery">
+                                                        <div class="popup-titley"> Flazz  </div>
+                                                        <div class="close-btny" onclick="togglepopupy()">&times;</div>
+                                                    </div>
+                                                    <!-- isi photo -->
+                                                    <img src="" alt="">
+                                                </div>
+                                        </div>
+
+
+
+
+                             <div class="title-box title-box2">
+                                 <p>Group Information</p>
+                            </div>
+                                <div class="user-data">
+                                    <label for="">Group Name</label>
+                                    <input type="text">
+                            
+                                 </div>
+                
+                                <div class="user-data">
+                                    <label for="">Password</label>
+                                    <input type="text">
+                            
+                                </div>
+                
+                                 <div class="user-data">
+                                     <label for="">Confirm Password</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="slide-btn">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span class="binusian">BINUSIAN</span>
+                                </div>
+
+                                <div class="submit-btn">
+                               <a href="../html/admin.participants.html"> <button class="submit" id="button">Submit</button></a>
+                                 </div>
+
+                             </div>
+                </div>
+                </section>
+</div>
+
+<!-- link javascrpt  -->
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>

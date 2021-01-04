@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../style/register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html"><img class="gambar" src="../assets/logo.png" alt="logo"></a>
+    </div>
+    <div class="formnya">
+        <form action="" class="inside">
+            <div class="heading">
+                Let's Start Your Adventure!
+            </div>
+
+            <div class="group-info">
+                <div class="head">
+                    <img class="gambarnya-group" src="../assets/icon/group.png" alt="group-icon">
+                    <span class="head-title">
+                        Group Information
+                    </span>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Group Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="password" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Password</label>
+                </div>
+                <div class="info">
+                    Min. 8 digits with uppercase, lowercase, number, and symbols (e.g. Angela_3)
+                </div>
+                <div class="input-data">
+                    <input type="password" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Confirm Password</label>
+                </div>
+                <div class="container">
+                    <label class="switch">
+                        <input type="checkbox" id="myCheck" onclick="myFunction()">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="what-is binusian">BINUSIAN</span>
+                </div>
+            </div>
+
+            <div class="leader-info">
+                <div class="head">
+                    <img class="gambarnya-solo" src="../assets/icon/leader.png" alt="leader-icon">
+                    <span class="head-title">
+                        Leader Information
+                    </span>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Leader Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="email" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Email</label>
+                </div>
+                <div class="input-data">
+                    <input type="phone" required>
+                    <div class="underline"></div>
+                    <label class="what-is">WA Number</label>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">LINE ID</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label class="what-is">Github ID</label>
+                </div>
+                <div class="birth">
+                    <div class="input-data pob">
+                        <input type="text" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Birthplace</label>
+                    </div>
+                    <span class="seperate"></span>
+                    <div class="input-data dob">
+                        <input type="date" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Birthday</label>
+                    </div>
+                </div>
+
+                <div id="cv">
+                    <div class="input-data">
+                        <input type="file" id="file" onchange="return ValidasiCV()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload CV</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>
+                </div>
+                <div id="text">
+                    <div class="input-data">
+                        <input type="file" id="fc" onchange="return ValidasiFC()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload Flazzcard</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>                 
+                </div>
+                <div id="data">
+                    <div class="input-data">
+                        <input type="file" id="idc" onchange="return ValidasiIDC()" required>
+                        <div class="underline"></div>
+                        <label class="what-is">Upload ID Card</label>
+                    </div>
+                    <div class="info">
+                        File must be in .pdf / .jpg / .jpeg / .png
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <button type="submit" class="btn">SUBMIT</button>
+            </div>
+        </form>
+        <script src="../js/ifbinus.js"></script>
+        <script src="../js/filetype.js"></script>
+    </div>
+</body>
+</html>

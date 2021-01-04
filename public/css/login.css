@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+body{
+    background-image: url(../assets/background-login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    position: absolute;
+    padding: 27px;
+}
+.gambar{
+    height: 62px;
+    width: 83px;
+}
+.bgtexture{
+    height: 50%;
+}
+.texture{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    -webkit-filter: brightness(1.5);
+    filter: brightness(1.5);
+}
+.luarbg{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.inside{
+    height: 633px;
+    width: 836px;
+    background: linear-gradient(135deg,#132735 15%, #30607F);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.wc-text{
+    font-size: 96px;
+    background-image: linear-gradient(90deg, #F9C80E, #F39200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* SLIDER ------------------ */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.textnya{
+    margin-left: 10px;
+}
+.switch{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 40px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch input{
+    display: none;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider{
+    background-color: #A8DADC;
+}
+input:checked + .slider::before{
+    transform: translateX(30px);
+}
+/* END OF SLIDER --------- */
+.na-text{
+    width: 80%;
+}
+.what-is{
+    font-size: 36px;
+}
+.click-here{
+    color: #F9C80E;
+}
+.btn{
+    color: black;
+    font-size: 36px;
+    height: 80px;
+    width: 308px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #F9C80E, #F39200);
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.center-box{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.formnya{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* TEST DISINI INPUT ANIMATION */
+.input-data{
+    display: flex;
+    margin: 5px 0;
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding-top: 20px;
+    font-size: 25px;
+    color: white;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 30px;
+    color: #F9C80E;
+}
+.input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+.underline::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #F9C80E;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline::before,
+.input-data input:valid ~ .underline::before{
+    transform: scaleX(1);
+}

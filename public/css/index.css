@@ -1,0 +1,865 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+body{
+    background-image: url('/background-bd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+.jarak{
+    margin-left: 10px;
+}
+.solid-l{
+    color: #F9C80E;
+    font-size: 72px;
+    font-weight: 900;
+}
+.polos-l, .gradient-l{
+    font-size: 96px;
+    font-weight: 400;
+}
+.gradient-l{
+    background-image: linear-gradient(90deg, #F9C80E, #F39200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.polos-ml{
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+.polos-m, .solid-m{
+    font-size: 36px;
+    font-weight: 700;
+}
+.solid-m, .solid-ml{
+    color: rgb(249, 200, 14);
+}
+.solid-ml{
+    font-size: 16px;
+    font-weight: 600;
+}
+.polos-s, .solid-s, .putih-s{
+    font-size: 30px;
+    font-weight: 700;
+}
+.solid-s{
+    color: rgb(249, 200, 14);
+}
+.polos-s{
+    color: rgba(191, 215, 234, 0.5);
+}
+
+/* ------- GENERAL ------------- */
+.navbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 49px;
+    height: 168px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(19, 39, 53, 0.25);
+    z-index: 5;
+}
+.nv-logo{
+    height: 62px;
+}
+.navbar-left, .navbar-right{
+    display: flex;
+    align-items: center;
+}
+.navbar-list{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    padding: 4px 17px;
+}
+.list-di-navbar{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li a, .login-text{
+    font-size: 18px;
+    text-decoration: none;
+}
+.navtext{
+    padding: 20px;
+}
+.active{
+    background-color: rgb(249, 200, 14);
+    border-radius: 5px;
+}
+.active a{
+    color: black;
+}
+.navlogin{
+    padding: 4px 17px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(249, 200, 14);
+}
+.navlogin:hover{
+    border-color: black;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.heading, .unknown{
+    z-index: 2;
+}
+.heading{
+    margin-top: 35px;
+}
+/* ----------- navbar ---------------- */
+.homee{
+    display: flex;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slide 60s infinite;
+}
+.home-text{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-top{
+    display: flex;
+    color: rgb(249, 200, 14);
+    border: solid 4px;
+    border-radius: 25px;
+    width: 550px;
+    justify-content: space-around;
+    align-items: center;
+}
+.tulisan-top{
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(249, 200, 14);
+}
+.text-mid, .text-bot{
+    display: flex;
+}
+.garis-tebel, .garis-tipis{
+    background-color: rgb(249, 200, 14);
+    border: none;
+    border-radius: 25px;
+}
+.garis-tebel{
+    height: 11px;
+    width: 183px;
+    margin-right: 385px;
+    margin-bottom: 20px;
+}
+.garis-tipis{
+    height: 6px;
+    width: 354px;
+    margin-left: 232px;
+}
+.backgrounds{
+    animation: slide 2s;
+}
+@keyframes slide{
+    0%{
+        background-image: url('/background/Hackathon\ 1.0.png');
+    }14%{
+        background-image: url('/background/Hackathon\ 1.0.png');
+    }14.28%{
+        background-image: url('/background/hackathon\ 1.0.1.png');
+    }28.28%{
+        background-image: url('/background/hackathon\ 1.0.1.png');
+    }28.56%{
+        background-image: url('/background/Hackathon\ 2.0.png');
+    }42.56%{
+        background-image: url('/background/Hackathon\ 2.0.png');
+    }42.84%{
+        background-image: url('/background/Hackathon\ 2.0.1.png');
+    }56.84%{
+        background-image: url('/background/Hackathon\ 2.0.1.png');
+    }57.12%{
+        background-image: url('/background/Hackathon\ 3.0.png');
+    }71.12%{
+        background-image: url('/background/Hackathon\ 3.0.png');
+    }71.4%{
+        background-image: url('/background/Hackathon\ 3.0.1.png');
+    }85.4%{
+        background-image: url('/background/Hackathon\ 3.0.1.png');
+    }85.68%{
+        background-image: url('/background/Hackathon\ 3.0.2.png');
+    }99.68%{
+        background-image: url('/background/Hackathon\ 3.0.2.png');
+    }100%{
+        background-image: url('/background/Hackathon\ 1.0.png');
+    }
+}
+/* -------- home ---------- */
+.aboutt, .aboutt2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 100px;
+}
+.aboutt{
+    height: 130vh;
+}
+.about-kotak{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+}
+.bgabt{
+    position: absolute;
+    left: 50%;
+}
+.bodynya{
+    display: flex;
+    flex-direction: column;
+}
+.button-reg{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.btnreg{
+    color: black;
+    font-size: 36px;
+    font-weight: 700;
+    height: 80px;
+    width: 397px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #F9C80E, #F39200);
+    border: none;
+}
+.btnreg:hover{
+    cursor: pointer;
+}
+.pointerline{
+    margin-left: 10px;
+    height: 5px;
+    width: 420px;
+    background-color: rgb(249, 200, 14);
+    border: none;
+}
+.download{
+    display: flex;
+    color: rgb(249, 200, 14);
+    border: solid 4px;
+    border-radius: 25px;
+    width: 267px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.download-text{
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(249, 200, 14);
+}
+/* about1 */
+.aboutt2{
+    height: 140vh;
+    margin-top: 100px;
+    align-items: center;
+}
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 410px;
+    height: 588px;
+    background-color: white;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.title-car{
+    color: rgb(249, 200, 14);
+    font-size: 36px;
+    font-weight: 700;
+}
+.subtitle-car{
+    color: rgb(19, 39, 53);
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+.head-car{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* --------- about ------------ */
+.champss{
+    height: 140vh;
+}
+.kotakbaru{
+    display: flex;
+}
+.hadiahnyaaa{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.kotak-di-kiri{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: space-around;
+}
+.icon{
+    width: 150px;
+    height: 150px;
+}
+.icon:hover{
+    transform: scale(1.1);
+}
+.juara-satu, .juara-dua, .juara-tiga, .tengahin, .konten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.juara-satu, .juara-dua, .juara-tiga{
+    display: none;
+    position: absolute;
+}
+.gmbr-juara{
+    margin-bottom: 5%;
+}
+.konten{
+    position: absolute;
+}
+.gar-1, .gar-2, .gar-3{
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(19, 39, 53);
+}
+.satu:hover, .dua:hover, .tiga:hover{
+    cursor: pointer;
+}
+.kotak-bawah, .kotak-atas{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+}
+.kotak-atas{
+    background-color: #FFF5CF;
+    border-radius: 40px 40px 0 0;
+    height: 166px;
+    flex-direction: column;
+}
+.kotak-bawah{
+    background-color: #FFFFFF;
+    border-radius: 0 0 40px 40px;
+    height: 333px;
+}
+.hidden{
+    position: absolute;
+}
+.bar-1, .bar-2, .hover-icon{
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(19, 39, 53);
+}
+.hover-icon{
+    width: 175px;
+    height: 175px;
+}
+/* ------ champion prize ------- */
+.timeline{
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+}
+.bawahnya{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.tl-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.tl-kiri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 520px;
+    background-image: linear-gradient(rgba(57,113,152,0), rgba(57,113,152,1));
+    border: none;
+    border-radius: 30px;
+}
+.tl-judul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 20%;
+    background-color: #FFF5CF;
+    border: none;
+    border-radius: 20px;
+}
+.tl-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 48px;
+    font-weight: 600;
+    color: rgba(57,113,152,1);
+}
+.tl-tgltgl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    width: 90%;
+}
+.tl-tombol{
+    width: 30px;
+    height: 30px;
+    margin-left: 5.2%;
+    z-index: 2;
+}
+.tl-tombol:hover{
+    cursor: pointer;
+}
+.garis-penghubung1, .garis-penghubung2, .garis-penghubung3{
+    position: absolute;
+    margin-left: 2.4%;
+    width: 2px;
+    height: 125px;
+    background-color: white;
+    z-index: 1;
+}
+.garis-penghubung2{
+    margin-bottom: 15%;
+}
+.garis-penghubung3{
+    margin-top: 15%;
+}
+.tl-pertama{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.tl-namajudul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+label{
+    width: 100%;
+}
+.c, .m, .o, .cm{
+    display: none;
+}
+.countdown{
+    color: white;
+    font-weight: 400;
+    font-size: 92px;
+}
+.faqq .heading {
+    margin-bottom: 50px;
+}
+.quesionanswer{
+    width: 100vh;
+    height: 150vh;
+    display: flex;
+    justify-content: space-around;
+}
+.accordion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+}
+.accordion .contentbX{
+    position: relative;
+}
+.accordion .contentbx .content{
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.accordion .contentbx.activex .content{
+    height : 200px;
+    padding-left: 10px;
+}
+.tanya1, .tanya2, .tanya3, .tanya4, .tanya5, .tanya6, .tanya7, .tanya8, .tanya9{
+    cursor: pointer;
+}
+.tanya1{
+    width: 375px;
+    height: 120px;
+}
+.jawab1{
+    width: 300px;
+    height: 200px;
+}
+.jawab2{
+    width: 400px;
+    height: 150px;
+}
+.tanya2{
+    width: 375px;
+    height: 120px;
+}
+.tanya3{
+    position: relative; 
+    width: 375px;
+    height: 120px;
+    cursor: pointer;
+}
+.jawab3{
+    width: 500px;
+    height: 200px; 
+}
+.tanya4{
+    width: 400px;
+    height: 150px;
+    cursor: pointer;
+}
+.jawab4{
+    width: 400px;
+    height: 200px;  
+}
+.tanya5{
+    width: 400px;
+    height: 150px;
+}
+.jawab5{
+    width: 300px;
+    height: 200px;
+}
+.tanya6{
+    width: 400px;
+    height: 150px;
+}
+.jawab6{
+    width: 400px;
+    height: 200px;
+}
+.tanya7, .tanya8, .tanya9, .tanya19, .tanya20{
+    width: 375px;
+    height: 175px;
+}
+.jawab7, .tanya8, .jawab8, .jawab9{
+    width: 400px;
+    height: 200px;
+}
+/* -------- timeline ---------- */
+.sponsor, .medpar{
+    height: 145vh;
+}
+.sponsor, .medpar{
+    width: 100%;
+    overflow: hidden;
+}
+.gold, .silver, .platinum, .media-1, .media-2{
+    display: flex;
+    margin-top: 10%;
+    width: 100%;
+}
+.platinum, .media-1{
+    margin-left: 26%;
+}
+.gold{
+    margin-left: 26%;
+    margin-right: 26%;
+}
+.silver, .media-2{
+    margin-left: 26%;
+}
+.slides, .slidess{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+.dalem-kandang{
+    position: absolute;
+    margin-top: 5%;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.isinyaaa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.log-atas, .log-bawah{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.log-atas{
+    margin-bottom: 20px;
+}
+.logogold1{
+    width: 104px;
+    height: 132px;
+}
+.logogold2{
+    width: 127px;
+    height: 127px;
+}
+.logogold3{
+    width: 233px;
+    height: 55px;
+}
+.bg{
+    width: 700px;
+    height: 500px;
+}
+.sps{
+    font-size: 64px;
+    font-weight: 700;
+}
+.logoc{
+    width: 415px;
+    height: 400px;
+}
+.prevnext-btn{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25%;
+    z-index: 1;
+}
+.geseran{
+    width: 80px;
+    height: 80px;
+}
+.prev-btn, .next-btn, .previ-btn, .nextt-btn{
+    width: 100px;
+    height: 100px;
+    background: none;
+    border: none;
+}
+.prev-btn, .previ-btn{
+    margin-left: 5%;
+}
+.next-btn, .nextt-btn{
+    margin-right: 5%;
+}
+.prev-btn:hover, .next-btn:hover, .previ-btn:hover, .nextt-btn:hover{
+    cursor: pointer;
+}
+.ile{
+    width: 100px;
+    height: 80px;
+}
+.je{
+    width: 110px;
+    height: 90px;
+}
+.bv{
+    width: 100px;
+    height: 60px;
+}
+.lukan, .info{
+    width: 100px;
+    height: 100px;
+}
+.medianya{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+}
+.b1, .b2, .b3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.kebawahh{
+    display: flex;
+    flex-direction: column;
+}
+.sejajar{
+    display: flex;
+}
+
+/* ------ contact form --------- */
+.contactus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    height: 135vh;
+}
+.any-question{
+    display: flex;
+    flex-direction: column;
+}
+.sejajar{
+    display: flex;
+}
+.contact-us-form{
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    background-image: linear-gradient(90deg, #F9C80E, #F39200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-us-form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-us-form label{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.contact-us-form input{
+    width: 450px;
+    height: 60px;
+    background-color:#FFF9E1;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 20px;
+    padding-left: 30px;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.35);
+    font-size : 20px;
+}
+.contact-us-form textarea{
+    background-color: #FFF9E1;
+    border:none;
+    border-radius: 30px;
+}
+.btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.submit-btn{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(213.91deg, #F39200 -4.55%, #F9C80E 79.9%);
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+.submit-btn:hover{
+    cursor: pointer;
+}
+/* ---------- FAQ ------------- */
+.footernya{
+    height: 220vh;
+    background-color: #FFF5CF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.kepala-footer{
+    font-size: 72px;
+    font-weight: 700;
+    color: black;
+}
+.atas, .bawah{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lg2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.garis{
+    height: 300px;
+    width: 5px;
+    background-color: black;
+}
+.logomedsos{
+    width: 100px;
+    height: 100px;
+}
+.twt{
+    width: 120px;
+    height: 100px;
+}
+.logoo{
+    width: 342px;
+    height: 99px;
+}
+.logop{
+    width: 305px;
+    height: 291px;
+}
+.op-judul{
+    font-size: 72px;
+    font-weight: 600;
+    color: black;
+}
+.organized-powered, .logo-logo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.logo-logo{
+    align-items: center;
+}
+.kakinya{
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+/* ---------- FOOTER ------------- */

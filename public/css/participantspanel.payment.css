@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Source Sans Pro;
+}
+
+
+body{
+    background : #FFF5CF;
+    
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+ 
+/* +++++++++++++++++++++++++++++  SIDE BAR +++++++++++++++++++++++++++*/
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #FFF5CF;
+    padding: 50px 0px;
+}
+.wrapper .sidebar h2 {
+    color:#142835;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar img {
+    width: 150px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+ 
+}
+
+.wrapper .sidebar ul li {
+ 
+    padding: 15px;
+    border-bottom: 1px solid rgba (0,0,0,0.05);
+    border-top: 1px solid rgba (225,225,225,0.05);
+}
+
+.wrapper .sidebar ul li a {
+    color: #bdb8d7;
+    display: block;
+    margin-top: 20px;
+}
+
+.wrapper .sidebar ul li a  .fas{
+    width: 25px;
+    color: #142835;
+    
+}
+
+
+.wrapper .sidebar ul li :hover {
+    color : #142835;
+    
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+   
+}
+
+
+body{
+    background : #142835;
+    
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+ 
+/* +++++++++++++++++++++++++++++  SIDE BAR +++++++++++++++++++++++++++*/
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #FFF5CF;
+    padding: 30px 0px;
+}
+.wrapper .sidebar h4 {
+    color: #142835;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar img {
+    width: 150px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+ 
+}
+
+.wrapper .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba (0,0,0,0.05);
+    border-top: 1px solid rgba (225,225,225,0.05);
+}
+
+.wrapper .sidebar ul li a {
+    color: #142835;
+    display: block;
+    font-size: 20px;
+    
+}
+
+.wrapper .sidebar ul li a  .fas{
+    width: 25px;
+    background-color:#FFF5CF;  
+}
+
+
+
+
+.wrapper .sidebar ul li :hover {
+    color:#F9C80E;
+}
+
+.wrapper .sidebar ul li :hover .fas {
+   
+        color:#F9C80E;
+}
+
+.wrapper .main-content {
+    width: 100%;
+    margin-left: 200px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+    
+}
+
+.wrapper .main-content .header {
+    width: 100%;
+    padding: 20px;
+    background-color:#142835;
+    color:#FFFFFF;
+    font-weight: bold;
+    font-size: 50px;
+  
+}
+
+ .sidebar h2 {
+     text-align: center;
+ }
+
+
+.payment-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+/* +++++++ QUESTION AND ANSWERS+++++++++++ */
+
+
+.qna {
+   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 400px;
+    margin-bottom: 50px;
+
+    
+}
+.q1 {
+    
+    height: 125px;
+    width: 650px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+
+
+.a1 {
+    
+    display: flex;
+    height: 300px;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.q2 {
+    height: 125px;
+    width: 650px;
+    margin-bottom: 20px;
+    
+}
+
+.a2 {
+
+    height: 400px;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.q3 {
+    height: 125px;
+    width: 650px;
+    margin-bottom: 20px;
+}
+
+.a3 {
+
+    height: 350px;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+
+.q4 {
+    height: 125px;
+    width: 650px;
+    margin-bottom: 20px;
+
+}
+
+.a4 {
+    height: 350px;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+
+}
+
+.q5 {
+    height: 125px;
+    width: 650px;
+    margin-bottom: 20px;
+}
+
+.a5 {
+    height: 350px;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+
+}
+
+
+/* +++++++++ bukti pembyaran +++++++++++++++++++ */
+
+.bukti-pembayaran {
+   
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    
+}
+.bukti-pembayaran-box {
+    
+    width: 650px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+
+    border: 5px solid  #f9c80f;
+    border-radius: 25px;
+    background-color: transparent;
+
+
+}
+
+/* upload gambar dan status */
+
+.bukti-pembayaran-box p {
+   margin-top: 20px;
+   margin-left: 50px;
+   
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+color: #F9C80E;
+}
+
+.bukti-pembayaran-box .file  {
+
+ margin-top: 10px;
+ margin-left: 50px;
+ color: #FFFFFF;
+ font-size: 20px;
+}
+
+.underline{
+width: 570px;
+margin-top: 10px;
+margin-left: 30px;
+border-bottom: 2px solid #F9C80E;
+
+}
+
+.info {
+    margin-left: 50px;
+    color: #FFFFFF;
+}
+
+.bukti-pembayaran-box .status {
+    margin-left: 50px;
+    width: 570px;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+

@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+body{
+    background-image: url(../assets/background-login.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.title{
+    font-size: 64px;
+}
+.logo{
+    position: absolute;
+    padding: 27px;
+}
+.gambar{
+    height: 62px;
+    width: 83px;
+}
+.formnya{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 197px 0;
+}
+.inside{
+    width: 836px;
+    height: 1357px;
+    background: linear-gradient(135deg,#132735 15%, #30607F);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.group-info, .leader-info{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.birth{
+    display: flex;
+}
+.pob, .dob{
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+}
+.seperate{
+    width: 60px;
+}
+.heading{
+    font-size: 64px;
+    background: -webkit-linear-gradient(orange,#F9C80E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.head{
+    display: flex;
+}
+.gambarnya-group{
+    width: 54px;
+    height: 40px;
+}
+/* SLIDER ------------------ */
+.container{
+    display: flex;
+    align-items: center;
+}
+.binusian{
+    margin-left: 10px;
+}
+.switch{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 40px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+.switch input{
+    display: none;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider{
+    background-color: #A8DADC;
+}
+input:checked + .slider::before{
+    transform: translateX(30px);
+}
+/* END OF SLIDER --------- */
+.gambarnya-solo{
+    width: 44px;
+    height: 49px;
+    padding-bottom: 5px;
+}
+.head-title{
+    font-size: 36px;
+    color: #F9C80E;
+    padding-left: 10px;
+}
+/* .inside input{
+    color: black;
+} */
+.what-is{
+    font-size: 36px;
+}
+.btn{
+    color: black;
+    font-size: 36px;
+    height: 80px;
+    width: 308px;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(90deg, #F9C80E, #F39200);
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+
+.upfile{
+    display: flex;
+    flex-direction: column;
+}
+.inputfile{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 30px;
+    padding: 10px 0;
+}
+#text{
+    display: none;
+}
+
+/* TEST DISINI INPUT ANIMATION */
+.input-data{
+    display: flex;
+    margin: 5px 0;
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding-top: 28px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 30px;
+    color: #F9C80E;
+}
+
+.input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+input::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+.underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+.underline::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #F9C80E;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline::before,
+.input-data input:valid ~ .underline::before{
+    transform: scaleX(1);
+}
+
+/* ini kalo error */
+/* ini garis kotak kalo error */
+/* .underline::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #F35523;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+} */
+
+/* ini textnya yang heading itu */
+/* .input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 30px;
+    color: #F35523;
+} */
