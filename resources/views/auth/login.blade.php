@@ -11,10 +11,11 @@
 <body>
     <div class="contents">
         <div class="logo">
-            <a href="index.html"><img class="gambar" src="/logo.png" alt="logo"></a>
+            <a href="{{ route('index') }}"><img class="gambar" src="/logo.png" alt="logo"></a>
         </div>
         <div class="luarbg">
-            <form action="" class="inside">
+            <form method="POST" action="{{ route('login') }}" class="inside">
+                @csrf
                 <div class="wc-text">
                     Welcome Back!
                 </div>
@@ -44,7 +45,7 @@
                 <div class="na-text">
                     <div class="what-is">
                         <span class="normal-txt">Don't have an account?</span>
-                        <a href="register.html"><span class="click-here">Click Here</span></a>
+                        <a href="{{ route('register') }}"><span class="click-here">Click Here</span></a>
                     </div>
                 </div>
                 <div class="button">

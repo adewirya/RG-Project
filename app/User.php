@@ -38,7 +38,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function member()
+    public function leader()
     {
         return $this->hasMany('App\member1');
     }

@@ -25,19 +25,14 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="navbar-right">
-                <a href="login.html"><div class="navlogin">
-                    <span class="login-text">LOGIN</span>
-                </div></a>
-            </div> -->
-            <div class="top-right links">
+            <div class="navbar-list">
                 @auth
-                    <a href="{{ url('/home') }}">Home</a>
+                    <div class="navtext"><a href="{{ url('/home') }}">Home</a></li></div>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
-        
+                    <div class="navtext"><a href="{{ route('login') }}">LOGIN</a></div>
+
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
+                       <div class="navtext"> <a href="{{ route('register') }}">REGISTER</a></li></div>
                     @endif
                 @endauth
             </div>
@@ -100,7 +95,7 @@
             </div>
     
             <div class="button-reg">
-                <a href="register.html"><button type="submit" class="btnreg">REGISTER NOW</button></a>
+                <a href="{{ route('register') }}"><button type="submit" class="btnreg">REGISTER NOW</button></a>
                 <div class="pointerline"></div>
             </div>
     
@@ -330,7 +325,7 @@
                 <div class="questionanswer">
                     <div class="accordion">
                         <div class="contentbx">
-                            <img class="tanya1" src="/1.png" alt="">
+                            <img class="tanya1" src="/chat/1.png" alt="">
                             <div class="content">
                                 <img class="jawab1" src="/2.png" alt="">
                             </div>

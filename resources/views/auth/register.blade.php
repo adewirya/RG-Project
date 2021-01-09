@@ -10,10 +10,11 @@
 </head>
 <body>
     <div class="logo">
-        <a href="index.html"><img class="gambar" src="/logo.png" alt="logo"></a>
+        <a href="{{ route('index')}}"><img class="gambar" src="/logo.png" alt="logo"></a>
     </div>
     <div class="formnya">
-        <form action="" class="inside">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
             <div class="heading">
                 Let's Start Your Adventure!
             </div>
@@ -27,22 +28,32 @@
                 </div>
 
                 <div class="input-data">
-                    <input type="text" required>
+                <input id="groupName" type="text" placeholder="Group Name" class="form-control @error('groupName') is-invalid @enderror" name="groupName" value="{{ old('groupName') }}" required autocomplete="groupName" autofocus>
                     <div class="underline"></div>
-                    <label class="what-is">Group Name</label>
+                    <label for="groupName" class="what-is">{{ __('Group Name') }}</label>
+                    @error('groupName')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="input-data">
-                    <input type="password" required>
+                <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                     <div class="underline"></div>
-                    <label class="what-is">Password</label>
+                    <label for="password" class="what-is">{{ __('Password') }}</label>
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="info">
                     Min. 8 digits with uppercase, lowercase, number, and symbols (e.g. Angela_3)
                 </div>
                 <div class="input-data">
-                    <input type="password" required>
+                <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     <div class="underline"></div>
-                    <label class="what-is">Confirm Password</label>
+                    <label for="password-confirm" class="what-is">{{ __('Confirm Password') }}</label>
                 </div>
                 <div class="container">
                     <label class="switch">
@@ -65,39 +76,74 @@
                     <input type="text" required>
                     <div class="underline"></div>
                     <label class="what-is">Leader Name</label>
+                    @error('leadN')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="input-data">
                     <input type="email" required>
                     <div class="underline"></div>
                     <label class="what-is">Email</label>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="input-data">
                     <input type="phone" required>
                     <div class="underline"></div>
                     <label class="what-is">WA Number</label>
+                    @error('leadNumber')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="input-data">
                     <input type="text" required>
                     <div class="underline"></div>
                     <label class="what-is">LINE ID</label>
+                    @error('leadID')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="input-data">
                     <input type="text" required>
                     <div class="underline"></div>
                     <label class="what-is">Github ID</label>
+                    @error('leadGit')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="birth">
                     <div class="input-data pob">
                         <input type="text" required>
                         <div class="underline"></div>
                         <label class="what-is">Birthplace</label>
+                        @error('leadBirth')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <span class="seperate"></span>
                     <div class="input-data dob">
                         <input type="date" required>
                         <div class="underline"></div>
                         <label class="what-is">Birthday</label>
+                        @error('leadDOB')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                         @enderror
                     </div>
                 </div>
                 <div id="cv">
