@@ -27,7 +27,27 @@
             </div>
             <div class="navbar-list">
                 @auth
-                    <div class="navtext"><a href="{{ url('/home') }}">Home</a></li></div>
+                    <ul class="list-di-navbar">
+                    <div class="navtext">
+                        <li>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                 {{ Auth::user()->groupName }} <span class="caret"></span>
+                            </a>
+                        </li>
+                    </div>
+
+                    <div class="navtext">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('LOGOUT') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </li>
+                    </div>
+                    </ul>
                 @else
                     <div class="navtext"><a href="{{ route('login') }}">LOGIN</a></div>
 

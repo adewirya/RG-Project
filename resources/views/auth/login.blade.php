@@ -1,58 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="{{asset('css/register.css')}}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="contents">
-        <div class="logo">
-            <a href="{{ route('index') }}"><img class="gambar" src="/logo.png" alt="logo"></a>
-        </div>
-        <div class="luarbg">
-            <form method="POST" action="{{ route('login') }}" class="inside">
-                @csrf
-                <div class="wc-text">
-                    Welcome Back!
-                </div>
+@extends('layouts.app')
 
-                <div class="center-box">
-                    <div class="formnya">
-                        <div class="input-data">
-                            <input type="text" required>
-                            <div class="underline"></div>
-                            <label class="what-is">Group Name</label>
-                        </div>
-                        <div class="input-data">
-                            <input type="password" required>
-                            <div class="underline"></div>
-                            <label class="what-is">Password</label>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                        <span class="what-is textnya">Remember Me</span>
-                    </div>
-                </div>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="na-text">
-                    <div class="what-is">
-                        <span class="normal-txt">Don't have an account?</span>
-                        <a href="{{ route('register') }}"><span class="click-here">Click Here</span></a>
-                    </div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="groupName" class="col-md-4 col-form-label text-md-right">{{ __('Group Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="groupName" type="text" placeholder="Group Name" class="form-control @error('groupName') is-invalid @enderror" name="groupName" value="{{ old('groupName') }}" required autocomplete="groupName" autofocus>
+
+                                @error('groupName')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="button">
-                    <button type="submit" class="btn">LOGIN</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-</body>
-</html>
+</div>
+@endsection
